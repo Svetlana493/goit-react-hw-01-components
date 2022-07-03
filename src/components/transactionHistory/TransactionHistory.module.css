@@ -1,0 +1,42 @@
+.TransactionHistory {
+    width: 500px;
+    height: auto;
+    border: 1px solid rgb(221, 216, 216);
+    box-shadow: 4px 4px 4px hsla(0, 0%, 0%, 0.15);
+    margin: 0 auto 40px;
+    border-radius: 8px;
+    background-color: aliceblue;
+}
+
+.TableHead {
+    color: white;
+    text-align: center;
+    height: 40px;
+    background: skyblue;
+}
+
+.TableTitle {
+    font-weight: bold;
+}
+
+.TableRaw {
+    height: 40px;
+}
+
+.TableRaw:hover {
+    cursor: pointer;
+    background-color: rgba(66, 125, 245, 0.578);
+}
+
+.TablePrimary {
+    background: rgb(175, 175, 175);
+}
+
+.TableSecondary {
+    background: white;
+}
+
+td {
+    padding: 5px;
+    /* border-radius: 5px; */
+}
