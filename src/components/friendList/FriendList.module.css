@@ -41,9 +41,11 @@
 }
 
 .Online {
-    background-color: green;
+    border: 10px solid green;
+    border-radius: 50%;
 }
 
 .Offline {
-    background-color: red;
+    border: 10px solid red;
+    border-radius: 50%;
 }
