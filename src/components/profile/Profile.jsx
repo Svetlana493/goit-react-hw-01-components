@@ -2,57 +2,50 @@ import PropTypes from 'prop-types';
 import s from './Profile.module.css';
 
 const Profile = props => {
-    const { username, tag, location, avatar, stats } = props;
+  const { username, tag, location, avatar, stats } = props;
 
-    return ( 
-        <div className = { s.Profile } >
-        
-        <div className = { s.Description } >
-        
-        i<mg src = { avatar }
-        alt = "User avatar"
-        className = { s.Avatar }
-        style = {
-            { height: '200px' }
-        }
-        />{' '} <
-        p className = { s.Name } > { username } < /p>{' '} <
-        p className = { s.Tag } > @ { tag } < /p>{' '} <
-        p className = { s.Location } > { location } < /p>{' '} < /
-        div > { ' ' } <
-        ul className = { s.Stats } >
-        <
-        li className = { s.Item } >
-        <
-        span className = { s.Label } > Followers: < /span>{' '} <
-        span className = { s.Quantity } > { stats.followers } < /span>{' '} < /
-        li > { ' ' } <
-        li className = { s.Item } >
-        <
-        span className = { s.Label } > Views: < /span>{' '} <
-        span className = { s.Quantity } > { stats.views } < /span>{' '} < /
-        li > { ' ' } <
-        li className = { s.Item } >
-        <
-        span className = { s.Label } > Likes: < /span>{' '} <
-        span className = { s.Quantity } > { stats.likes } < /span>{' '} < /
-        li > { ' ' } <
-        /ul>{' '} < /
-        div >
-    );
+  return (
+    <div className={s.profile}>
+      <div className={s.description}>
+        <img
+          src={avatar}
+          alt="User avatar"
+          className={s.avatar}
+          style={{ height: '200px' }}
+        />{' '}
+        <p className={s.name}> {username} </p>{' '}
+        <p className={s.tag}> @ {tag} </p>{' '}
+        <p className={s.location}> {location} </p>{' '}
+      </div>{' '}
+      <ul className={s.stats}>
+        <li className={s.item}>
+          <span className={s.label}> Followers: </span>{' '}
+          <span className={s.quantity}> {stats.followers} </span>{' '}
+        </li>{' '}
+        <li className={s.item}>
+          <span className={s.label}> Views: </span>{' '}
+          <span className={s.quantity}> {stats.views} </span>{' '}
+        </li>{' '}
+        <li className={s.item}>
+          <span className={s.label}> Likes: </span>{' '}
+          <span className={s.quantity}> {stats.likes} </span>{' '}
+        </li>{' '}
+      </ul>{' '}
+    </div>
+  );
 };
 
 Profile.propTypes = {
-    avatar: PropTypes.string.isRequired,
-    className: PropTypes.string.isRequired,
-    username: PropTypes.string.isRequired,
-    tag: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    stats: PropTypes.shape({
-        followers: PropTypes.number.isRequired,
-        likes: PropTypes.number.isRequired,
-        views: PropTypes.number.isRequired,
-    }).isRequired,
+  avatar: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default Profile;
